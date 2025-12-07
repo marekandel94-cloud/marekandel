@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marek Anděl - Váš člověk v Číně</title>
+    <style>
+        /* === ZÁKLADNÍ STYLY === */
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #fff;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hlavní barva (vytažená ze screenshotu) */
+        :root {
+            --primary-blue: #3f729b;
+            --dark-blue: #0f2d4a;
+            --light-bg: #f4f6f8;
+        }
+
+        /* === 1. SEKCE: O MNĚ (Váš člověk v Číně) === */
+        .about-section {
+            padding: 80px 0;
+            background-color: #fff;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Dva sloupce: Text | Fotka */
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: 36px;
+            font-weight: 800;
+            color: var(--dark-blue);
+            margin-bottom: 24px;
+            text-align: left; /* Zarovnání doleva */
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            font-size: 16px;
+            color: #555;
+        }
+
+        .about-text strong {
+            color: #222;
+            font-weight: 700;
+        }
+
+        /* Štítky (Tags) */
+        .tags-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 30px;
+        }
+
+        .tag {
+            background-color: #eef4f8;
+            color: var(--dark-blue);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .tag i {
+            color: var(--primary-blue); /* Ikona fajfky nebo postavy */
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        /* === 2. SEKCE: KONTAKTNÍ FORMULÁŘ === */
+        .contact-section {
+            background-color: var(--light-bg);
+            padding: 80px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 40px auto;
+        }
+
+        .section-header h2 {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--dark-blue);
+            margin-bottom: 15px;
+        }
+
+        .subtext {
+            font-size: 16px;
+            color: #555;
+        }
+
+        .contact-form {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: var(--dark-blue);
+        }
+
+        input[type="text"],
+        input[type="email"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            background-color: #f9f9f9;
+            font-size: 15px;
+            color: #333;
+            box-sizing: border-box;
+            font-family: inherit;
+        }
+
+        input:focus, textarea:focus, select:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+            background-color: #fff;
+        }
+
+        /* File Upload */
+        .file-upload-box {
+            position: relative;
+            border: 2px dashed #ccc;
+            background-color: #f9f9f9;
+            padding: 20px;
+            text-align: center;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .file-upload-box:hover {
+            border-color: var(--primary-blue);
+            background-color: #f0f7fb;
+        }
+
+        .file-upload-box input[type="file"] {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        .upload-content .icon { font-size: 20px; }
+        .upload-content .text { font-weight: 500; color: #555; margin-left: 8px;}
+
+        .submit-btn {
+            width: 100%;
+            background-color: var(--primary-blue);
+            color: white;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+            transition: background-color 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: #2c587a;
+        }
+
+        /* Responzivita pro mobily */
+        @media (max-width: 768px) {
+            .about-grid {
+                grid-template-columns: 1fr; /* Na mobilu pod sebe */
+                gap: 30px;
+            }
+            /* Na mobilu chceme fotku možná nahoře, nebo text nahoře? 
+               Obvykle text -> fotka. Necháme default order. */
+            
+            .about-image {
+                order: -1; /* Pokud chceš fotku nad textem, odkomentuj toto */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <h2>Váš člověk v Číně</h2>
+                    
+                    <p>
+                        Ahoj, jsem <strong>Marek Anděl</strong>. Pocházím z Českých Budějovic, ale léta jsem působil ve Velké Británii, kde jsem získal západní přístup k obchodu.
+                    </p>
+                    <p>
+                        Nyní žiji se svou rodinou přímo v Číně, nedaleko města Hangzhou. Tato oblast je <strong>jedním z nejdůležitějších průmyslových center světa</strong>.
+                    </p>
+                    <p>
+                        Díky tomu vám nabízím unikátní mix: <strong>české myšlení, západní standardy a místní kontakty</strong>. Tvoříme tým s mou ženou (rodilou Číňankou), takže pro vás zajistíme <strong>obchod bez jazykových i kulturních bariér</strong>.
+                    </p>
+
+                    <div class="tags-container">
+                        <div class="tag"><span>✓</span> Čeština</div>
+                        <div class="tag"><span>✓</span> Angličtina</div>
+                        <div class="tag"><span>👥</span> Čínština (manželka v týmu)</div>
+                    </div>
+                </div>
+
+                <div class="about-image">
+                    <img src="tvoje-fotka-marek.jpg" alt="Marek Anděl v Číně"> 
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div class="container">
+            
+            <div class="section-header">
+                <h2>Napište mi</h2>
+                <p class="subtext">
+                    Máte vyhlédnutou továrnu? Pošlete mi detaily a já <strong>prověřím její spolehlivost</strong>.
+                </p>
+            </div>
+
+            <form class="contact-form" action="#" method="POST" enctype="multipart/form-data">
+                
+                <div class="form-group">
+                    <label for="name">Jméno</label>
+                    <input type="text" id="name" name="name" placeholder="Jan Novák" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="vas@email.cz" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="service">O jakou službu máte zájem?</label>
+                    <div class="select-wrapper">
+                        <select id="service" name="service">
+                            <option value="proverka">Vzdálená prověrka (Rejstříky/Volání)</option>
+                            <option value="inspekce">Fyzická inspekce</option>
+                            <option value="sourcing">Vyhledání dodavatele</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Zpráva (odkaz na dodavatele, lokalita...)</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Mám kontakt na firmu XYZ ve městě Ningbo, potřebuji ověřit, zda skutečně vyrábí..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Přílohy (vizitky, fotky produktů, dokumenty)</label>
+                    <div class="file-upload-box">
+                        <input type="file" id="file" name="attachments[]" multiple>
+                        <div class="upload-content">
+                            <span class="icon">📎</span>
+                            <span class="text">Klikněte nebo přetáhněte soubory sem</span>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn">ODESLAT NEZÁVAZNĚ</button>
+
+            </form>
+        </div>
+    </section>
+
+</body>
+</html>
