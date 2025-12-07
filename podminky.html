@@ -8,6 +8,18 @@
     <link rel="stylesheet" href="main.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { background-color: #f9f9f9; }
+        .legal-content { background: white; padding: 60px; margin: 40px auto; max-width: 900px; border-radius: 8px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); }
+        .legal-content h1 { margin-bottom: 30px; text-align: left; color: var(--primary-blue); border-bottom: 3px solid var(--highlight-orange); display: inline-block; padding-bottom: 10px; }
+        .legal-content h2 { font-size: 1.3rem; margin-top: 40px; margin-bottom: 15px; color: var(--primary-blue); font-weight: 700; background: #f4f7f6; padding: 10px 15px; border-left: 5px solid var(--accent-blue); }
+        .legal-content h3 { font-size: 1.1rem; margin-top: 25px; margin-bottom: 10px; color: var(--text-dark); font-weight: 600; }
+        .legal-content p, .legal-content ul, .legal-content ol { margin-bottom: 15px; color: #444; text-align: left; line-height: 1.8; font-size: 0.95rem; }
+        .legal-content ul, .legal-content ol { padding-left: 25px; }
+        .legal-content li { margin-bottom: 8px; }
+        .alert-box { background-color: #fff3cd; border: 1px solid #ffeeba; color: #856404; padding: 15px; border-radius: 5px; margin: 20px 0; font-size: 0.9rem; }
+        @media (max-width: 768px) { .legal-content { padding: 30px 20px; margin: 20px; } }
+    </style>
 </head>
 <body>
 
@@ -24,46 +36,87 @@
         <div class="legal-content">
             <h1>Všeobecné obchodní podmínky</h1>
 
-            <div style="background: #f4f7f6; padding: 20px; border-radius: 6px; margin-bottom: 30px; border-left: 4px solid var(--accent-blue);">
-                <p style="margin-bottom: 5px;"><strong>Poskytovatel služby:</strong></p>
-                <p style="margin-bottom: 5px; color: #333; font-weight: bold;">R&M Trade Ltd.</p>
-                <p style="margin-bottom: 5px;">119/11 Gorgie Road, Edinburgh, Scotland, EH11 1TE</p>
-                <p style="margin-bottom: 5px;"><strong>Registrační číslo (Company No.):</strong> SC836993</p>
-                <p style="margin-bottom: 0;"><strong>Kontakt:</strong> [DOPLŇTE E-MAIL]</p>
+            <p>Tyto obchodní podmínky (dále jen „VOP“) upravují smluvní vztahy mezi společností <strong>R&M Trade Ltd.</strong> (dále jen „Poskytovatel“) a jejími obchodními partnery (dále jen „Klient“). Poskytovatel je britskou společností, primární oblastí obchodní činnosti je však Česká republika a Slovensko. Vztahy se proto řídí standardními B2B pravidly s ohledem na český právní řád.</p>
+
+            <div style="background: #f4f7f6; padding: 20px; border-radius: 6px; margin-bottom: 30px; border: 1px solid #e0e0e0;">
+                <p style="margin-bottom: 5px;"><strong>Identifikace Poskytovatele:</strong></p>
+                <p style="margin-bottom: 5px; color: var(--primary-blue); font-weight: bold;">R&M Trade Ltd.</p>
+                <p style="margin-bottom: 5px;">Sídlo: 119/11 Gorgie Road, Edinburgh, Scotland, EH11 1TE</p>
+                <p style="margin-bottom: 5px;">Registrační číslo (Company No.): SC836993</p>
+                <p style="margin-bottom: 0;">Kontakt: [DOPLŇTE VÁŠ EMAIL]</p>
             </div>
 
-            <h2>1. Úvodní ustanovení</h2>
-            <p>Tyto obchodní podmínky upravují vzájemná práva a povinnosti mezi poskytovatelem služeb (společnost R&M Trade Ltd., zastoupená Markem Andělem) a objednatelem (klientem) v oblasti zprostředkování obchodu, kontroly kvality a poradenství při dovozu z Číny.</p>
+            <h2>I. Úvodní ustanovení</h2>
+            <ol>
+                <li>Tyto VOP jsou platné pro všechny obchodní případy, pokud není v písemné smlouvě dohodnuto jinak.</li>
+                <li><strong>B2B vztah:</strong> Služby jsou určeny výhradně pro podnikatele (B2B). Klient potvrzuje, že jedná v rámci své obchodní nebo jiné podnikatelské činnosti. Spotřebitelská práva (např. odstoupení do 14 dnů bez udání důvodu) se na tento vztah neuplatní.</li>
+            </ol>
 
-            <h2>2. Předmět služby</h2>
-            <p>Poskytovatel se zavazuje pro klienta provést sjednané úkony, kterými mohou být:</p>
+            <h2>II. Typy smluvních vztahů</h2>
+            <p>V závislosti na zvolené službě vstupuje Klient s Poskytovatelem do jednoho ze dvou typů právních vztahů:</p>
+            
+            <h3>A) Režim „Inspekce a Prověrka“ (Služba)</h3>
+            <p>Týká se služeb: <em>Vzdálená prověrka, Osobní inspekce, Návštěva veletrhu.</em></p>
             <ul>
-                <li><strong>Vzdálená prověrka:</strong> Kontrola dodavatele v rejstřících, ověření licence, telefonická verifikace.</li>
-                <li><strong>Inspekce:</strong> Fyzická návštěva továrny, pořízení fotodokumentace, kontrola vzorků.</li>
-                <li><strong>Sourcing:</strong> Vyhledání vhodného dodavatele dle specifikace klienta.</li>
-            </ul>
-            <p>Poskytovatel jedná jako nezávislý konzultant. Není prodejcem zboží ani jeho dovozcem do EU (pokud není písemně dohodnuto jinak).</p>
-
-            <h2>3. Odpovědnost za vady</h2>
-            <p>Výstupem služby je „Report“ (zpráva), která odráží stav zjištěný v době kontroly. Poskytovatel nenese odpovědnost za:</p>
-            <ul>
-                <li>Skryté vady, které nebylo možné odhalit běžnou vizuální kontrolou nebo bez specializovaného laboratorního vybavení.</li>
-                <li>Změny v kvalitě výroby, které nastanou po provedení inspekce (např. záměna zboží při nakládce, pokud u ní poskytovatel nebyl přítomen).</li>
-                <li>Škody způsobené přepravou.</li>
+                <li>Jde o vztah obdobný příkazní smlouvě. Předmětem je provedení činnosti (kontroly, zjištění informací) a podání zprávy.</li>
+                <li>Poskytovatel <strong>není prodejcem zboží</strong>.</li>
+                <li>Výstupem je Report (PDF, foto, video).</li>
             </ul>
 
-            <h2>4. Platební podmínky</h2>
-            <p>Služby jsou hrazeny na základě vystavené faktury od společnosti R&M Trade Ltd. U služeb vyžadujících cestovní náklady (vlak, ubytování) může být vyžadována záloha ve výši 50–100 % předpokládaných nákladů předem.</p>
+            <h3>B) Režim „Sourcing na klíč“ (Dovoz)</h3>
+            <p>Týká se služby: <em>Sourcing na klíč, Vyhledání a dovoz zboží.</em></p>
+            <ul>
+                <li>Jde o vztah, kde Poskytovatel vystupuje jako dodavatel/dovozce zboží (případně komisionář), pokud tak je výslovně sjednáno v objednávce.</li>
+                <li>Předmětem je dodání zboží dle specifikace Klienta.</li>
+            </ul>
 
-            <h2>5. Mlčenlivost</h2>
-            <p>Poskytovatel se zavazuje zachovávat mlčenlivost o všech obchodních tajemstvích klienta, o kterých se v průběhu spolupráce dozví (např. design produktů, marže, obchodní strategie).</p>
+            <h2>III. Podmínky pro Inspekce a Prověrky</h2>
+            <ol>
+                <li><strong>Omezení odpovědnosti:</strong> Report z inspekce odráží stav zboží nebo továrny v přesném čase a místě kontroly. Poskytovatel nenese odpovědnost za:
+                    <ul>
+                        <li>Skryté vady, které nebylo možné odhalit vizuální kontrolou.</li>
+                        <li>Změny, které výrobce provedl po odjezdu inspektora (např. záměna zboží při nakládce, pokud nebyla objednána služba dohledu nad nakládkou).</li>
+                        <li>Pravdivost dokumentů předložených třetími stranami (čínskými úřady/továrnami), pokud je nelze běžným způsobem ověřit.</li>
+                    </ul>
+                </li>
+                <li><strong>Výsledek:</strong> Doporučení „Doporučuji / Nedoporučuji“ je odborným názorem Poskytovatele na základě zjištěných faktů, nikoliv garancí budoucího obchodního úspěchu.</li>
+            </ol>
 
-            <h2>6. Rozhodné právo</h2>
-            <p>Vztahy neupravené těmito podmínkami se řídí právním řádem Skotska, případně dle dohody právním řádem země klienta, pokud to povaha služby umožňuje.</p>
+            <h2>IV. Podmínky pro Sourcing a Dovoz</h2>
+            <div class="alert-box">
+                <i class="fas fa-exclamation-circle"></i> <strong>Důležité:</strong> V tomto režimu Poskytovatel vystupuje jako dodavatel zboží pro Klienta.
+            </div>
+            <ol>
+                <li><strong>Schválení vzorku (Golden Sample):</strong> Před spuštěním hromadné výroby zajistí Poskytovatel výrobu vzorku. <strong>Písemným schválením vzorku Klientem se tento vzorek stává závazným standardem kvality.</strong></li>
+                <li><strong>Reklamace:</strong> Klient nemá nárok na reklamaci zboží, pokud dodané zboží odpovídá kvalitou schválenému vzorku (Golden Sample), a to i v případě, že neodpovídá původním (teoretickým) představám Klienta.</li>
+                <li><strong>Tolerance:</strong> V hromadné výrobě jsou přípustné drobné odchylky v barvě, rozměrech či váze, které jsou v daném průmyslovém odvětví v Číně obvyklé (tzv. industry standard), pokud nebylo písemně sjednáno jinak.</li>
+                <li><strong>Logistika a Clo:</strong> Pokud Poskytovatel zajišťuje dopravu, jedná na účet Klienta. Konečnou odpovědnost za úhradu cla a DPH v zemi určení nese Klient (pokud není dohodnuto DDP - Delivery Duty Paid).</li>
+            </ol>
+
+            <h2>V. Platební podmínky</h2>
+            <ol>
+                <li><strong>Služby (Inspekce):</strong> Splatnost faktury je ihned nebo před provedením služby. Cestovní náklady (vlak, ubytování) jsou účtovány dle reálné spotřeby nebo paušálem předem.</li>
+                <li><strong>Zboží (Sourcing):</strong> Standardní platební podmínka je 100 % záloha před odesláním zboží z Číny, nebo dle dohody (např. 30 % záloha na výrobu, 70 % před naloděním).</li>
+                <li>Až do úplného zaplacení zůstává zboží majetkem Poskytovatele (výhrada vlastnictví).</li>
+            </ol>
+
+            <h2>VI. Odpovědnost za škodu a Vyšší moc</h2>
+            <ol>
+                <li><strong>Omezení náhrady škody:</strong> Odpovědnost Poskytovatele za škodu způsobenou Klientovi porušením smlouvy je omezena maximálně do výše ceny zaplacené za konkrétní službu (u inspekcí) nebo do výše provize Poskytovatele (u sourcingu).</li>
+                <li><strong>Vyloučení ušlého zisku:</strong> Poskytovatel v žádném případě neodpovídá za ušlý zisk, ztrátu obchodních příležitostí nebo jiné nepřímé škody Klienta.</li>
+                <li><strong>Vyšší moc (Force Majeure):</strong> Poskytovatel nenese odpovědnost za nesplnění povinností způsobené okolnostmi, které nemohl ovlivnit (přírodní katastrofy v Číně, pandemie, vládní restrikce, změny celních předpisů, válka, stávky dopravců).</li>
+            </ol>
+
+            <h2>VII. Rozhodné právo a řešení sporů</h2>
+            <ol>
+                <li><strong>Rozhodné právo:</strong> Právní vztahy mezi Poskytovatelem a Klientem se řídí **právem České republiky**, s vyloučením norem mezinárodního práva soukromého, které by vedly k aplikaci jiného práva.</li>
+                <li><strong>Řešení sporů:</strong> Spory budou řešeny přednostně smírnou cestou. V případě neúspěchu je k řešení sporu příslušný **věcně a místně příslušný soud v Praze**.</li>
+            </ol>
 
             <br>
-            <p><em>Tyto podmínky jsou platné od 1. 1. 2025.</em></p>
-            <br>
+            <p><em>Tyto podmínky nabývají účinnosti dnem 1. 1. 2025.</em></p>
+            
+            <br><br>
             <a href="index.html" class="cta-button secondary">← Zpět na web</a>
         </div>
     </div>
