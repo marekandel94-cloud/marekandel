@@ -10,6 +10,8 @@
 
     <link rel="stylesheet" href="main.css">
     
+    <link rel="icon" type="image/png" href="images/favicon.png"> 
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -103,6 +105,7 @@
             <p class="section-intro">Neriskujte. Vyberte si úroveň ochrany, kterou potřebujete. <br>Většina klientů začíná <strong>Vzdálenou prověrkou</strong>.</p>
             
             <div class="services-grid">
+                
                 <div class="service-card featured-card">
                     <div class="card-banner">🚀 NEJOBLÍBENĚJŠÍ START</div>
                     <div class="icon-box"><i class="fas fa-laptop-code"></i></div>
@@ -118,6 +121,7 @@
                     </ul>
                     <a href="#kontakt" class="cta-button">Objednat prověrku</a>
                 </div>
+
                 <div class="service-card">
                     <div class="icon-box"><i class="fas fa-camera-retro"></i></div>
                     <h3>Osobní inspekce</h3>
@@ -132,6 +136,7 @@
                     </ul>
                     <a href="#kontakt" class="cta-button secondary">Poptat výjezd</a>
                 </div>
+
                 <div class="service-card">
                     <div class="icon-box"><i class="fas fa-search-dollar"></i></div>
                     <h3>Sourcing na klíč</h3>
@@ -241,9 +246,9 @@
             <h2 class="text-left">Napište mi</h2>
             <p class="section-intro text-left" style="margin-left: 0;">Máte vyhlédnutou továrnu? Pošlete mi detaily a já <strong>prověřím její spolehlivost</strong>.</p>
             
-            <form action="https://formspree.io/f/myzwypbz" method="POST" class="contact-form" enctype="multipart/form-data">
+            <form action="https://formspree.io/f/xblnapzy" method="POST" class="contact-form" enctype="multipart/form-data">
                 <div class="form-group"><label for="name">Jméno</label><input type="text" id="name" name="name" required placeholder="Jan Novák"></div>
-                <div class="form-group"><label for="email">E-mail</label><input type="email" id="email" name="email" required placeholder="vas@email.cz"></div>
+                <div class="form-group"><label for="email">E-mail</label><input type="email" id="email" name="email" required placeholder="marek@marekandel.com"></div>
                 <input type="hidden" name="_subject" value="Nová poptávka z webu Marek Anděl">
                 <div class="form-group">
                     <label for="service">O jakou službu máte zájem?</label>
@@ -276,6 +281,9 @@
             <h3>Marek Anděl</h3>
             <p>Váš partner pro bezpečný dovoz z Číny.</p>
             <p><i class="fas fa-map-marker-alt"></i> Hangzhou, Zhejiang, Čína</p>
+            
+            <p><i class="fas fa-envelope"></i> <a href="mailto:marek@marekandel.com" style="color: #ccc;">marek@marekandel.com</a></p>
+
             <div style="display: flex; justify-content: center; gap: 20px; margin-top: 30px; flex-wrap: wrap;">
                 <a href="https://wa.me/447519918629" target="_blank" class="footer-oval-btn whatsapp-tile" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i> <span>WhatsApp</span></a>
                 <button class="footer-oval-btn wechat-tile wechat-trigger-action" aria-label="WeChat"><i class="fab fa-weixin"></i> <span>WeChat</span></button>
@@ -293,9 +301,15 @@
     </footer>
 
     <div class="sticky-sidebar">
+        <a href="mailto:marek@marekandel.com" class="side-btn" target="_blank" aria-label="E-mail">
+            <i class="fas fa-envelope"></i>
+            <span class="side-tooltip">Napsat e-mail</span>
+        </a>
+        
         <button class="side-btn wechat-trigger-action" aria-label="WeChat"><i class="fab fa-weixin"></i><span class="side-tooltip">WeChat QR</span></button>
         <a href="https://wa.me/447519918629" target="_blank" class="side-btn" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i><span class="side-tooltip">WhatsApp</span></a>
     </div>
+    
     <div id="wechat-modal" class="modal-overlay">
         <div class="modal-content">
             <button class="close-modal">&times;</button>
