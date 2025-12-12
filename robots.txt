@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Odkaz na mapu stránek
+Sitemap: https://marekandel.com/sitemap.xml
