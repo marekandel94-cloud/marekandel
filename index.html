@@ -95,11 +95,11 @@
 
     <div class="noise-overlay"></div>
 
-    <!-- NAVIGATION -->
-    <nav class="fixed z-50 transition-all duration-300 w-[90%] md:w-[95%] max-w-7xl top-4 md:top-6 left-1/2 -translate-x-1/2" aria-label="Hlavní navigace">
-        <div class="glass shadow-glass transition-all duration-300 hover:bg-white/90 flex justify-between items-center rounded-full px-6 py-3 md:px-10 md:py-4">
+    <!-- NAVIGATION: Mobile Optimized -->
+    <nav class="fixed z-50 transition-all duration-300 w-[95%] max-w-7xl top-4 md:top-6 left-1/2 -translate-x-1/2" aria-label="Hlavní navigace">
+        <div class="glass shadow-glass transition-all duration-300 hover:bg-white/90 flex justify-between items-center rounded-full px-4 py-3 md:px-10 md:py-4">
             <a href="#" class="flex items-center gap-3 group" aria-label="Marek Anděl - Domů">
-                <div class="w-10 h-10 md:w-12 md:h-12 bg-navy-900 rounded-full flex items-center justify-center relative overflow-hidden group-hover:scale-110 transition-transform shadow-lg border border-navy-800">
+                <div class="w-10 h-10 md:w-12 md:h-12 bg-navy-900 rounded-full flex items-center justify-center relative overflow-hidden group-hover:scale-110 transition-transform shadow-lg border border-navy-800 shrink-0">
                     <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full p-2">
                         <defs>
                             <radialGradient id="coreGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(12 14) rotate(90) scale(4)">
@@ -113,7 +113,8 @@
                         <path d="M12 21L21 16V8L12 13V21Z" fill="white" fill-opacity="0.1" stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </div>
-                <div class="leading-tight hidden sm:block">
+                <!-- FIXED: Visible on mobile now -->
+                <div class="leading-tight">
                     <span class="block font-bold text-navy-800 text-sm md:text-base tracking-wide">MAREK ANDĚL</span>
                     <span class="block text-[10px] md:text-xs text-gray-500 font-medium uppercase tracking-widest">Audit & Inspekce</span>
                 </div>
@@ -127,7 +128,7 @@
             </div>
 
             <div class="flex items-center gap-3">
-                <a href="#contact" class="bg-navy-800 text-white px-6 py-2.5 md:px-8 md:py-3 rounded-full text-sm md:text-base font-semibold hover:bg-accent-blue transition-all shadow-lg hover:shadow-neon flex items-center gap-2">
+                <a href="#contact" class="hidden md:flex bg-navy-800 text-white px-6 py-2.5 md:px-8 md:py-3 rounded-full text-sm md:text-base font-semibold hover:bg-accent-blue transition-all shadow-lg hover:shadow-neon items-center gap-2">
                     <span>Poptat</span>
                     <i class="fa-solid fa-arrow-right text-xs"></i>
                 </a>
@@ -142,11 +143,12 @@
             <a href="#services" class="block p-3 hover:bg-white rounded-xl text-center font-medium" onclick="this.parentElement.classList.add('hidden')">Služby</a>
             <a href="#process" class="block p-3 hover:bg-white rounded-xl text-center font-medium" onclick="this.parentElement.classList.add('hidden')">Proces</a>
             <a href="#reviews" class="block p-3 hover:bg-white rounded-xl text-center font-medium" onclick="this.parentElement.classList.add('hidden')">Videa</a>
+            <a href="#contact" class="block p-3 bg-navy-900 text-white rounded-xl text-center font-bold mt-2" onclick="this.parentElement.classList.add('hidden')">Poptat služby</a>
         </div>
     </nav>
 
     <!-- HERO SECTION -->
-    <header class="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
+    <header class="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
         <div class="absolute inset-0 z-0">
             <video autoplay muted loop playsinline class="w-full h-full object-cover scale-105">
                 <source src="videos/hero-video.mp4" type="video/mp4">
@@ -154,13 +156,14 @@
             <div class="absolute inset-0 bg-navy-900/80 bg-gradient-to-b from-navy-900/90 via-navy-900/70 to-navy-900/90 backdrop-blur-[2px]"></div>
         </div>
 
-        <div class="container mx-auto px-6 relative z-10 text-center">
+        <div class="container mx-auto px-6 relative z-10 text-center pt-20">
             <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-1.5 mb-8 animate-float">
                 <span class="w-2 h-2 bg-green-400 rounded-full pulse-ring"></span>
                 <span class="text-white/90 text-xs font-bold uppercase tracking-widest">Nyní v Hangzhou, Zhejiang</span>
             </div>
 
-            <h1 class="text-5xl md:text-7xl lg:text-8xl font-serif text-white mb-6 leading-tight tracking-tight">
+            <!-- FIXED: Smaller text on mobile -->
+            <h1 class="text-4xl md:text-7xl lg:text-8xl font-serif text-white mb-6 leading-tight tracking-tight">
                 Import bez <br/>
                 <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent-blue to-accent-orange italic pr-4">nočních můr.</span>
             </h1>
@@ -198,9 +201,9 @@
     </header>
 
     <!-- INTRO SECTION -->
-    <section id="about" class="py-24 md:py-32 relative">
+    <section id="about" class="py-16 md:py-32 relative">
         <div class="container mx-auto px-6">
-            <div class="flex flex-col lg:flex-row items-center gap-16">
+            <div class="flex flex-col lg:flex-row items-center gap-12 md:gap-16">
                 <!-- Visual Side -->
                 <div class="w-full lg:w-1/2 relative group max-w-md mx-auto lg:max-w-none lg:mx-0">
                     <div class="absolute -inset-4 bg-gradient-to-tr from-accent-blue to-accent-orange rounded-[40px] opacity-20 blur-2xl group-hover:opacity-30 transition-opacity duration-500"></div>
@@ -222,7 +225,7 @@
                 <!-- Content Side -->
                 <div class="w-full lg:w-1/2">
                     <h2 class="text-sm font-bold text-accent-blue uppercase tracking-widest mb-4">O mně</h2>
-                    <h3 class="text-4xl md:text-5xl font-serif text-navy-900 mb-8 leading-tight">
+                    <h3 class="text-3xl md:text-5xl font-serif text-navy-900 mb-8 leading-tight">
                         Český přístup.<br>Britské vzdělání.<br><span class="text-gradient-orange">Čínská adresa.</span>
                     </h3>
                     <div class="space-y-6 text-gray-600 text-lg leading-relaxed">
@@ -247,7 +250,7 @@
     <section id="services" class="py-24 bg-surface-off border-t border-gray-200">
         <div class="container mx-auto px-6">
             <div class="text-center max-w-3xl mx-auto mb-20">
-                <h2 class="text-4xl font-serif text-navy-900 mb-6">Jak chráním vaše peníze?</h2>
+                <h2 class="text-3xl md:text-4xl font-serif text-navy-900 mb-6">Jak chráním vaše peníze?</h2>
                 <p class="text-gray-600 text-lg">Vyberte si úroveň ochrany. Většina klientů začíná rychlou prověrkou, než pošlou první dolar.</p>
             </div>
 
@@ -408,7 +411,8 @@
                 </div>
                 
                 <div class="lg:w-2/3 w-full">
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 relative">
+                    <!-- FIXED: 1 column on mobile, 4 on desktop -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 relative">
                         <div class="hidden md:block absolute top-8 left-10 right-10 h-0.5 bg-gray-800 z-0"></div>
 
                         <!-- Step 1 -->
@@ -458,7 +462,7 @@
         <div class="container mx-auto px-6">
             <div class="flex flex-col items-center text-center mb-12 gap-6">
                 <div>
-                    <h2 class="text-4xl font-serif text-navy-900 mb-2">Důkaz místo slibů</h2>
+                    <h2 class="text-3xl md:text-4xl font-serif text-navy-900 mb-2">Důkaz místo slibů</h2>
                     <p class="text-gray-600">Podívejte se na Čínu mýma očima na YouTube.</p>
                 </div>
                 <a href="https://www.youtube.com/@marekvcine" target="_blank" class="flex items-center gap-3 px-6 py-3 rounded-full border border-gray-200 hover:border-red-500 hover:text-red-500 transition-colors font-medium">
@@ -551,8 +555,8 @@
                     </div>
                 </div>
 
-                <!-- Form -->
-                <div class="w-full md:w-2/3 p-12">
+                <!-- Form - FIXED: Padding reduced for mobile -->
+                <div class="w-full md:w-2/3 p-6 md:p-12">
                     <h2 class="text-3xl font-serif text-navy-900 mb-8">Nezávazná poptávka</h2>
                     <form action="https://formspree.io/f/xblnapzy" method="POST" enctype="multipart/form-data" class="space-y-6">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -623,7 +627,7 @@
                 <a href="https://www.instagram.com/marekvcine/" target="_blank" class="w-10 h-10 rounded-full bg-white/5 hover:bg-white/20 flex items-center justify-center transition-colors" aria-label="Instagram">
                     <i class="fa-brands fa-instagram"></i>
                 </a>
-                <!-- Threads (NEW) -->
+                <!-- Threads -->
                 <a href="https://www.threads.net/@marekandel" target="_blank" class="w-10 h-10 rounded-full bg-white/5 hover:bg-white/20 flex items-center justify-center transition-colors" aria-label="Threads">
                     <i class="fa-brands fa-threads"></i>
                 </a>
