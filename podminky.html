@@ -3,124 +3,177 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Obchodní podmínky | R&M Trade Ltd.</title>
+    <title>Obchodní podmínky | Marek Anděl</title>
     <meta name="robots" content="noindex, follow">
-    <link rel="stylesheet" href="main.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        body { background-color: #f9f9f9; }
-        .legal-content { background: white; padding: 60px; margin: 40px auto; max-width: 900px; border-radius: 8px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); }
-        .legal-content h1 { margin-bottom: 30px; text-align: left; color: var(--primary-blue); border-bottom: 3px solid var(--highlight-orange); display: inline-block; padding-bottom: 10px; }
-        .legal-content h2 { font-size: 1.3rem; margin-top: 40px; margin-bottom: 15px; color: var(--primary-blue); font-weight: 700; background: #f4f7f6; padding: 10px 15px; border-left: 5px solid var(--accent-blue); }
-        .legal-content h3 { font-size: 1.1rem; margin-top: 25px; margin-bottom: 10px; color: var(--text-dark); font-weight: 600; }
-        .legal-content p, .legal-content ul, .legal-content ol { margin-bottom: 15px; color: #444; text-align: left; line-height: 1.8; font-size: 0.95rem; }
-        .legal-content ul, .legal-content ol { padding-left: 25px; }
-        .legal-content li { margin-bottom: 8px; }
-        .alert-box { background-color: #fff3cd; border: 1px solid #ffeeba; color: #856404; padding: 15px; border-radius: 5px; margin: 20px 0; font-size: 0.9rem; }
-        @media (max-width: 768px) { .legal-content { padding: 30px 20px; margin: 20px; } }
-    </style>
+    
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: { 900: '#051b2c', 800: '#0f2e48' },
+                        accent: { blue: '#38bdf8', orange: '#fb923c' }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body>
+<body class="bg-gray-50 text-gray-800 antialiased selection:bg-accent-blue selection:text-white">
 
-    <header>
-        <div class="container header-flex">
-            <a href="index.html" class="logo-modern-style">
-                <div class="logo-icon-circle"><i class="fas fa-box main-icon"></i></div>
-                <div class="logo-text-block"><span class="brand-name">MAREK ANDĚL</span><span class="brand-tagline">ZPĚT NA HLAVNÍ STRANU</span></div>
+    <!-- Simple Nav -->
+    <nav class="bg-white border-b border-gray-100 py-4 sticky top-0 z-50">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3">
+                <div class="w-8 h-8 bg-navy-900 rounded-full flex items-center justify-center text-white font-serif font-bold">M</div>
+                <span class="font-bold text-navy-900 tracking-wide text-sm">MAREK ANDĚL</span>
+            </a>
+            <a href="index.html" class="text-sm font-medium text-gray-500 hover:text-navy-900 transition-colors flex items-center gap-2">
+                <i class="fa-solid fa-arrow-left"></i> Zpět na web
             </a>
         </div>
-    </header>
+    </nav>
 
-    <div class="container">
-        <div class="legal-content">
-            <h1>Všeobecné obchodní podmínky</h1>
+    <!-- Content -->
+    <main class="container mx-auto px-6 py-12 md:py-20 max-w-4xl">
+        <div class="bg-white rounded-3xl shadow-sm border border-gray-100 p-8 md:p-12">
+            
+            <h1 class="text-3xl md:text-4xl font-serif text-navy-900 mb-8 border-b-4 border-accent-orange inline-block pb-2">Všeobecné obchodní podmínky</h1>
 
-            <p>Tyto obchodní podmínky (dále jen „VOP“) upravují smluvní vztahy mezi společností <strong>R&M Trade Ltd.</strong> (dále jen „Poskytovatel“) a jejími obchodními partnery (dále jen „Klient“). Poskytovatel je britskou společností, primární oblastí obchodní činnosti je však Česká republika a Slovensko. Vztahy se proto řídí standardními B2B pravidly s ohledem na český právní řád.</p>
+            <p class="text-gray-600 mb-8 leading-relaxed">
+                Tyto obchodní podmínky (dále jen „VOP“) upravují smluvní vztahy mezi společností <strong>R&M Trade Ltd.</strong> (dále jen „Poskytovatel“) a jejími obchodními partnery (dále jen „Klient“). Poskytovatel je britskou společností, primární oblastí obchodní činnosti je však Česká republika a Slovensko. Vztahy se proto řídí standardními B2B pravidly s ohledem na český právní řád.
+            </p>
 
-            <div style="background: #f4f7f6; padding: 20px; border-radius: 6px; margin-bottom: 30px; border: 1px solid #e0e0e0;">
-                <p style="margin-bottom: 5px;"><strong>Identifikace Poskytovatele:</strong></p>
-                <p style="margin-bottom: 5px; color: var(--primary-blue); font-weight: bold;">R&M Trade Ltd.</p>
-                <p style="margin-bottom: 5px;">Sídlo: 119/11 Gorgie Road, Edinburgh, Scotland, EH11 1TE</p>
-                <p style="margin-bottom: 5px;">Registrační číslo (Company No.): SC836993</p>
-                <p style="margin-bottom: 0;">Kontakt: <strong>marek@marekandel.com</strong></p>
+            <div class="bg-blue-50 border border-blue-100 rounded-xl p-6 mb-10 text-sm">
+                <p class="font-bold text-navy-900 mb-2">Identifikace Poskytovatele:</p>
+                <ul class="space-y-1 text-gray-700">
+                    <li><strong>R&M Trade Ltd.</strong></li>
+                    <li>Sídlo: 119/11 Gorgie Road, Edinburgh, Scotland, EH11 1TE</li>
+                    <li>Registrační číslo (Company No.): SC836993</li>
+                    <li>Kontakt: <a href="mailto:marek@marekandel.com" class="text-accent-blue hover:underline">marek@marekandel.com</a></li>
+                </ul>
             </div>
 
-            <h2>I. Úvodní ustanovení</h2>
-            <ol>
-                <li>Tyto VOP jsou platné pro všechny obchodní případy, pokud není v písemné smlouvě dohodnuto jinak.</li>
-                <li><strong>B2B vztah:</strong> Služby jsou určeny výhradně pro podnikatele (B2B). Klient potvrzuje, že jedná v rámci své obchodní nebo jiné podnikatelské činnosti. Spotřebitelská práva (např. odstoupení do 14 dnů bez udání důvodu) se na tento vztah neuplatní.</li>
-            </ol>
+            <div class="space-y-10">
+                <section>
+                    <h2 class="text-xl font-bold text-navy-900 mb-4 flex items-center gap-3">
+                        <span class="w-8 h-8 rounded-full bg-navy-900 text-white flex items-center justify-center text-sm">I</span>
+                        Úvodní ustanovení
+                    </h2>
+                    <ol class="list-decimal pl-5 space-y-2 text-gray-600 marker:font-bold marker:text-navy-900">
+                        <li>Tyto VOP jsou platné pro všechny obchodní případy, pokud není v písemné smlouvě dohodnuto jinak.</li>
+                        <li><strong>B2B vztah:</strong> Služby jsou určeny výhradně pro podnikatele (B2B). Klient potvrzuje, že jedná v rámci své obchodní nebo jiné podnikatelské činnosti. Spotřebitelská práva (např. odstoupení do 14 dnů bez udání důvodu) se na tento vztah neuplatní.</li>
+                    </ol>
+                </section>
 
-            <h2>II. Typy smluvních vztahů</h2>
-            <p>V závislosti na zvolené službě vstupuje Klient s Poskytovatelem do jednoho ze dvou typů právních vztahů:</p>
-            
-            <h3>A) Režim „Inspekce a Prověrka“ (Služba)</h3>
-            <p>Týká se služeb: <em>Vzdálená prověrka, Osobní inspekce, Návštěva veletrhu.</em></p>
-            <ul>
-                <li>Jde o vztah obdobný příkazní smlouvě. Předmětem je provedení činnosti (kontroly, zjištění informací) a podání zprávy.</li>
-                <li>Poskytovatel <strong>není prodejcem zboží</strong>.</li>
-                <li>Výstupem je Report (PDF, foto, video).</li>
-            </ul>
+                <section>
+                    <h2 class="text-xl font-bold text-navy-900 mb-4 flex items-center gap-3">
+                        <span class="w-8 h-8 rounded-full bg-navy-900 text-white flex items-center justify-center text-sm">II</span>
+                        Typy smluvních vztahů
+                    </h2>
+                    <p class="text-gray-600 mb-4">V závislosti na zvolené službě vstupuje Klient s Poskytovatelem do jednoho ze dvou typů právních vztahů:</p>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-gray-50 p-5 rounded-xl">
+                            <h3 class="font-bold text-navy-900 mb-2">A) Režim „Inspekce a Prověrka“</h3>
+                            <p class="text-xs text-gray-500 uppercase tracking-wide mb-3">Vzdálená prověrka, Osobní inspekce, Veletrh</p>
+                            <ul class="list-disc pl-4 space-y-2 text-sm text-gray-600">
+                                <li>Jde o vztah obdobný příkazní smlouvě.</li>
+                                <li>Předmětem je provedení činnosti a podání zprávy.</li>
+                                <li>Poskytovatel <strong>není prodejcem zboží</strong>.</li>
+                                <li>Výstupem je Report (PDF, foto, video).</li>
+                            </ul>
+                        </div>
+                        <div class="bg-gray-50 p-5 rounded-xl">
+                            <h3 class="font-bold text-navy-900 mb-2">B) Režim „Sourcing na klíč“</h3>
+                            <p class="text-xs text-gray-500 uppercase tracking-wide mb-3">Vyhledání a dovoz zboží</p>
+                            <ul class="list-disc pl-4 space-y-2 text-sm text-gray-600">
+                                <li>Poskytovatel může vystupovat jako dodavatel/dovozce.</li>
+                                <li>Předmětem je dodání zboží dle specifikace Klienta.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
 
-            <h3>B) Režim „Sourcing na klíč“ (Dovoz)</h3>
-            <p>Týká se služby: <em>Sourcing na klíč, Vyhledání a dovoz zboží.</em></p>
-            <ul>
-                <li>Jde o vztah, kde Poskytovatel vystupuje jako dodavatel/dovozce zboží (případně komisionář), pokud tak je výslovně sjednáno v objednávce.</li>
-                <li>Předmětem je dodání zboží dle specifikace Klienta.</li>
-            </ul>
+                <section>
+                    <h2 class="text-xl font-bold text-navy-900 mb-4 flex items-center gap-3">
+                        <span class="w-8 h-8 rounded-full bg-navy-900 text-white flex items-center justify-center text-sm">III</span>
+                        Podmínky pro Inspekce a Prověrky
+                    </h2>
+                    <ol class="list-decimal pl-5 space-y-3 text-gray-600 marker:font-bold marker:text-navy-900">
+                        <li><strong>Omezení odpovědnosti:</strong> Report z inspekce odráží stav zboží nebo továrny v přesném čase a místě kontroly. Poskytovatel nenese odpovědnost za:
+                            <ul class="list-disc pl-5 mt-2 space-y-1 text-sm">
+                                <li>Skryté vady neodhalitelné vizuální kontrolou.</li>
+                                <li>Změny provedené výrobcem po odjezdu inspektora.</li>
+                                <li>Pravdivost dokumentů třetích stran, pokud je nelze běžně ověřit.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Výsledek:</strong> Doporučení je odborným názorem Poskytovatele, nikoliv garancí budoucího obchodního úspěchu.</li>
+                    </ol>
+                </section>
 
-            <h2>III. Podmínky pro Inspekce a Prověrky</h2>
-            <ol>
-                <li><strong>Omezení odpovědnosti:</strong> Report z inspekce odráží stav zboží nebo továrny v přesném čase a místě kontroly. Poskytovatel nenese odpovědnost za:
-                    <ul>
-                        <li>Skryté vady, které nebylo možné odhalit vizuální kontrolou.</li>
-                        <li>Změny, které výrobce provedl po odjezdu inspektora (např. záměna zboží při nakládce, pokud nebyla objednána služba dohledu nad nakládkou).</li>
-                        <li>Pravdivost dokumentů předložených třetími stranami (čínskými úřady/továrnami), pokud je nelze běžným způsobem ověřit.</li>
+                <section>
+                    <h2 class="text-xl font-bold text-navy-900 mb-4 flex items-center gap-3">
+                        <span class="w-8 h-8 rounded-full bg-navy-900 text-white flex items-center justify-center text-sm">IV</span>
+                        Podmínky pro Sourcing a Dovoz
+                    </h2>
+                    <div class="bg-orange-50 border-l-4 border-orange-400 p-4 mb-4 text-sm text-orange-800">
+                        <i class="fa-solid fa-triangle-exclamation mr-2"></i> <strong>Důležité:</strong> V tomto režimu Poskytovatel vystupuje jako dodavatel zboží pro Klienta.
+                    </div>
+                    <ol class="list-decimal pl-5 space-y-3 text-gray-600 marker:font-bold marker:text-navy-900">
+                        <li><strong>Schválení vzorku (Golden Sample):</strong> Písemným schválením vzorku Klientem se tento vzorek stává závazným standardem kvality.</li>
+                        <li><strong>Reklamace:</strong> Klient nemá nárok na reklamaci, pokud zboží odpovídá schválenému vzorku, i když neodpovídá původním teoretickým představám.</li>
+                        <li><strong>Tolerance:</strong> Přípustné jsou drobné odchylky v barvě/rozměrech dle "industry standard" v Číně.</li>
+                        <li><strong>Logistika a Clo:</strong> Konečnou odpovědnost za úhradu cla a DPH v zemi určení nese Klient (pokud není dohodnuto DDP).</li>
+                    </ol>
+                </section>
+
+                <section>
+                    <h2 class="text-xl font-bold text-navy-900 mb-4 flex items-center gap-3">
+                        <span class="w-8 h-8 rounded-full bg-navy-900 text-white flex items-center justify-center text-sm">V</span>
+                        Platební podmínky a Odpovědnost
+                    </h2>
+                    <ul class="list-disc pl-5 space-y-2 text-gray-600">
+                        <li><strong>Služby (Inspekce):</strong> Splatnost faktury je ihned nebo před provedením služby.</li>
+                        <li><strong>Zboží:</strong> Standardně 100 % záloha před odesláním z Číny (nebo dle dohody).</li>
+                        <li><strong>Omezení škody:</strong> Odpovědnost za škodu je omezena do výše ceny služby nebo provize. Poskytovatel neodpovídá za ušlý zisk.</li>
+                        <li><strong>Vyšší moc:</strong> Poskytovatel nenese odpovědnost za okolnosti vyšší moci (pandemie, válka, přírodní katastrofy).</li>
                     </ul>
-                </li>
-                <li><strong>Výsledek:</strong> Doporučení „Doporučuji / Nedoporučuji“ je odborným názorem Poskytovatele na základě zjištěných faktů, nikoliv garancí budoucího obchodního úspěchu.</li>
-            </ol>
+                </section>
 
-            <h2>IV. Podmínky pro Sourcing a Dovoz</h2>
-            <div class="alert-box">
-                <i class="fas fa-exclamation-circle"></i> <strong>Důležité:</strong> V tomto režimu Poskytovatel vystupuje jako dodavatel zboží pro Klienta.
+                <section>
+                    <h2 class="text-xl font-bold text-navy-900 mb-4 flex items-center gap-3">
+                        <span class="w-8 h-8 rounded-full bg-navy-900 text-white flex items-center justify-center text-sm">VI</span>
+                        Rozhodné právo
+                    </h2>
+                    <p class="text-gray-600">
+                        Právní vztahy se řídí <strong>právem České republiky</strong>. Spory budou řešeny přednostně smírnou cestou, případně u <strong>věcně a místně příslušného soudu v Praze</strong>.
+                    </p>
+                </section>
             </div>
-            <ol>
-                <li><strong>Schválení vzorku (Golden Sample):</strong> Před spuštěním hromadné výroby zajistí Poskytovatel výrobu vzorku. <strong>Písemným schválením vzorku Klientem se tento vzorek stává závazným standardem kvality.</strong></li>
-                <li><strong>Reklamace:</strong> Klient nemá nárok na reklamaci zboží, pokud dodané zboží odpovídá kvalitou schválenému vzorku (Golden Sample), a to i v případě, že neodpovídá původním (teoretickým) představám Klienta.</li>
-                <li><strong>Tolerance:</strong> V hromadné výrobě jsou přípustné drobné odchylky v barvě, rozměrech či váze, které jsou v daném průmyslovém odvětví v Číně obvyklé (tzv. industry standard), pokud nebylo písemně sjednáno jinak.</li>
-                <li><strong>Logistika a Clo:</strong> Pokud Poskytovatel zajišťuje dopravu, jedná na účet Klienta. Konečnou odpovědnost za úhradu cla a DPH v zemi určení nese Klient (pokud není dohodnuto DDP - Delivery Duty Paid).</li>
-            </ol>
 
-            <h2>V. Platební podmínky</h2>
-            <ol>
-                <li><strong>Služby (Inspekce):</strong> Splatnost faktury je ihned nebo před provedením služby. Cestovní náklady (vlak, ubytování) jsou účtovány dle reálné spotřeby nebo paušálem předem.</li>
-                <li><strong>Zboží (Sourcing):</strong> Standardní platební podmínka je 100 % záloha před odesláním zboží z Číny, nebo dle dohody (např. 30 % záloha na výrobu, 70 % před naloděním).</li>
-                <li>Až do úplného zaplacení zůstává zboží majetkem Poskytovatele (výhrada vlastnictví).</li>
-            </ol>
+            <div class="mt-12 pt-8 border-t border-gray-100 text-sm text-gray-400">
+                Tyto podmínky nabývají účinnosti dnem 1. 1. 2025.
+            </div>
 
-            <h2>VI. Odpovědnost za škodu a Vyšší moc</h2>
-            <ol>
-                <li><strong>Omezení náhrady škody:</strong> Odpovědnost Poskytovatele za škodu způsobenou Klientovi porušením smlouvy je omezena maximálně do výše ceny zaplacené za konkrétní službu (u inspekcí) nebo do výše provize Poskytovatele (u sourcingu).</li>
-                <li><strong>Vyloučení ušlého zisku:</strong> Poskytovatel v žádném případě neodpovídá za ušlý zisk, ztrátu obchodních příležitostí nebo jiné nepřímé škody Klienta.</li>
-                <li><strong>Vyšší moc (Force Majeure):</strong> Poskytovatel nenese odpovědnost za nesplnění povinností způsobené okolnostmi, které nemohl ovlivnit (přírodní katastrofy v Číně, pandemie, vládní restrikce, změny celních předpisů, válka, stávky dopravců).</li>
-            </ol>
-
-            <h2>VII. Rozhodné právo a řešení sporů</h2>
-            <ol>
-                <li><strong>Rozhodné právo:</strong> Právní vztahy mezi Poskytovatelem a Klientem se řídí **právem České republiky**, s vyloučením norem mezinárodního práva soukromého, které by vedly k aplikaci jiného práva.</li>
-                <li><strong>Řešení sporů:</strong> Spory budou řešeny přednostně smírnou cestou. V případě neúspěchu je k řešení sporu příslušný **věcně a místně příslušný soud v Praze**.</li>
-            </ol>
-
-            <br>
-            <p><em>Tyto podmínky nabývají účinnosti dnem 1. 1. 2025.</em></p>
-            
-            <br><br>
-            <a href="index.html" class="cta-button secondary">← Zpět na web</a>
         </div>
-    </div>
+    </main>
 
-    <footer><div class="container"><p>&copy; 2025 R&M Trade Ltd. (Marek Anděl). Všechna práva vyhrazena.</p></div></footer>
+    <footer class="bg-navy-900 text-white py-8 border-t border-navy-800 text-center text-sm text-gray-500">
+        &copy; 2026 Marek Anděl - R&M Trade Ltd.
+    </footer>
+
 </body>
 </html>
