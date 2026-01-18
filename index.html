@@ -114,7 +114,8 @@
                     </svg>
                 </div>
                 <div class="leading-tight">
-                    <span class="block font-bold text-navy-800 text-sm md:text-base tracking-wide">MAREK ANDĚL</span>
+                    <!-- Adjusted for mobile visibility -->
+                    <span class="block font-bold text-navy-800 text-xs md:text-base tracking-wide truncate max-w-[150px] md:max-w-none">MAREK ANDĚL</span>
                     <span class="block text-[10px] md:text-xs text-gray-500 font-medium uppercase tracking-widest">Audit & Inspekce</span>
                 </div>
             </a>
@@ -155,13 +156,13 @@
             <div class="absolute inset-0 bg-navy-900/80 bg-gradient-to-b from-navy-900/90 via-navy-900/70 to-navy-900/90 backdrop-blur-[2px]"></div>
         </div>
 
-        <!-- FIXED: pt-32 for mobile to avoid overlap -->
         <div class="container mx-auto px-6 relative z-10 text-center pt-32 md:pt-20">
             <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-1.5 mb-8 animate-float">
                 <span class="w-2 h-2 bg-green-400 rounded-full pulse-ring"></span>
                 <span class="text-white/90 text-xs font-bold uppercase tracking-widest">Nyní v Hangzhou, Zhejiang</span>
             </div>
 
+            <!-- Fix: Reduced font size on mobile (text-4xl) to prevent wrapping issues -->
             <h1 class="text-4xl md:text-7xl lg:text-8xl font-serif text-white mb-6 leading-tight tracking-tight">
                 Import bez <br/>
                 <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent-blue to-accent-orange italic pr-4">nočních můr.</span>
@@ -181,7 +182,6 @@
                 </a>
             </div>
 
-            <!-- Trust Signals - FIXED: Removed opacity-70 and used lighter text for visibility -->
             <div class="mt-16 flex flex-wrap justify-center gap-8 md:gap-16">
                 <div class="text-center">
                     <div class="text-3xl font-bold text-white font-serif">100%</div>
@@ -277,8 +277,8 @@
                             <a href="#contact" class="inline-flex items-center text-accent-blue font-bold hover:gap-2 transition-all">Chci prověřit firmu <i class="fa-solid fa-arrow-right ml-2 text-sm"></i></a>
                         </div>
                         
-                        <!-- Graphic -->
-                        <div class="w-full md:w-1/3 relative flex items-center justify-center p-2">
+                        <!-- Graphic - FIXED: w-64 mx-auto on mobile to prevent huge size -->
+                        <div class="w-64 mx-auto md:w-1/3 relative flex items-center justify-center p-2">
                              <div class="relative w-full aspect-[4/5] bg-white rounded-xl shadow-[0_10px_40px_-10px_rgba(0,0,0,0.1)] border border-gray-100 p-5 transform rotate-3 group-hover:rotate-0 transition-all duration-500 overflow-hidden flex flex-col">
                                 <div class="flex items-center gap-3 mb-6 border-b border-gray-50 pb-4">
                                     <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-accent-blue">
@@ -410,7 +410,6 @@
                 </div>
                 
                 <div class="lg:w-2/3 w-full">
-                    <!-- FIXED: 1 column on mobile, 4 on desktop -->
                     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 relative">
                         <div class="hidden md:block absolute top-8 left-10 right-10 h-0.5 bg-gray-800 z-0"></div>
 
@@ -554,8 +553,8 @@
                     </div>
                 </div>
 
-                <!-- Form - FIXED: Padding reduced for mobile -->
-                <div class="w-full md:w-2/3 p-6 md:p-12">
+                <!-- Form - FIXED: Added pb-16 for sticky button clearance -->
+                <div class="w-full md:w-2/3 p-6 md:p-12 pb-16 md:pb-12">
                     <h2 class="text-3xl font-serif text-navy-900 mb-8">Nezávazná poptávka</h2>
                     <form action="https://formspree.io/f/xblnapzy" method="POST" enctype="multipart/form-data" class="space-y-6">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
