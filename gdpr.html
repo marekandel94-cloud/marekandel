@@ -1,15 +1,51 @@
 <!DOCTYPE html>
-<html lang="cs">
+<html lang="cs" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GDPR | Marek Anděl</title>
-    <meta name="robots" content="noindex, follow">
     
-    <!-- Fonts & Icons -->
+    <!-- SEO PRIMARY -->
+    <title>Marek Anděl | Kontrola kvality a audit továren v Číně</title>
+    <meta name="description" content="Jsem váš český inspektor přímo v Hangzhou. Zajišťuji prověrky dodavatelů, audit továren a kontrolu kvality (QC) zboží před odesláním. Předcházejte podvodům při dovozu z Číny.">
+    <meta name="keywords" content="audit továrny čína, kontrola kvality čína, dovoz z číny, sourcing, inspekce zboží, prověrka dodavatele, hangzhou, yiwu, canton fair">
+    <meta name="author" content="Marek Anděl">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://marekandel.com/">
+    
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <!-- OPEN GRAPH / SOCIAL (WhatsApp, LinkedIn preview) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://marekandel.com/">
+    <meta property="og:title" content="Marek Anděl | Váš člověk v Číně - Audit & Inspekce">
+    <meta property="og:description" content="Než pošlete peníze do Číny, pošlete tam mě. Fyzické inspekce továren a kontrola zboží s českým přístupem.">
+    <meta property="og:image" content="https://marekandel.com/images/og-image.jpg"> <!-- Placeholder for future -->
+
+    <!-- STRUCTURED DATA (Schema.org) - The SEO Secret Weapon -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Marek Anděl - Audit a Inspekce Čína",
+      "image": "https://marekandel.com/images/marek-profile.jpg",
+      "url": "https://marekandel.com",
+      "telephone": "+447519918629",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Hangzhou",
+        "addressRegion": "Zhejiang",
+        "addressCountry": "CN"
+      },
+      "description": "Český inspektor kvality a sourcing agent žijící v Hangzhou. Specializace na prověrky továren a kontrolu zboží.",
+      "priceRange": "$$"
+    }
+    </script>
+    
+    <!-- Fonts: Inter (Tech/Clean) & Playfair Display (Editorial Trust) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     
     <!-- Tailwind CSS -->
@@ -19,101 +55,652 @@
             theme: {
                 extend: {
                     colors: {
-                        navy: { 900: '#051b2c', 800: '#0f2e48' },
-                        accent: { blue: '#38bdf8', orange: '#fb923c' }
+                        navy: {
+                            900: '#051b2c',
+                            800: '#0f2e48',
+                            700: '#1a3b5c',
+                        },
+                        accent: {
+                            blue: '#38bdf8', // Sky 400
+                            orange: '#fb923c', // Orange 400
+                            red: '#ef4444',
+                        },
+                        surface: {
+                            light: '#f8fafc',
+                            off: '#f1f5f9'
+                        }
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
                         serif: ['Playfair Display', 'serif'],
+                    },
+                    boxShadow: {
+                        'glass': '0 8px 32px 0 rgba(31, 38, 135, 0.07)',
+                        'neon': '0 0 20px rgba(56, 189, 248, 0.3)',
                     }
                 }
             }
         }
     </script>
-</head>
-<body class="bg-gray-50 text-gray-800 antialiased selection:bg-accent-blue selection:text-white">
 
-    <!-- Simple Nav -->
-    <nav class="bg-white border-b border-gray-100 py-4 sticky top-0 z-50">
-        <div class="container mx-auto px-6 flex justify-between items-center">
-            <a href="index.html" class="flex items-center gap-3">
-                <div class="w-8 h-8 bg-navy-900 rounded-full flex items-center justify-center text-white font-serif font-bold">M</div>
-                <span class="font-bold text-navy-900 tracking-wide text-sm">MAREK ANDĚL</span>
+    <style>
+        /* --- 2026 DESIGN SYSTEM --- */
+        html { scroll-behavior: smooth; }
+        body { 
+            background-color: #f8fafc; 
+            color: #0f172a; 
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+        .noise-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 9999; opacity: 0.03;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+        .bento-card {
+            background: white; border-radius: 24px; padding: 2rem; transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1); border: 1px solid rgba(0,0,0,0.04); position: relative; overflow: hidden;
+        }
+        .bento-card:hover {
+            transform: translateY(-4px) scale(1.005); box-shadow: 0 20px 40px -10px rgba(0,0,0,0.08); border-color: rgba(56, 189, 248, 0.3);
+        }
+        .text-gradient { background: linear-gradient(135deg, #0f2e48 0%, #38bdf8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .text-gradient-orange { background: linear-gradient(135deg, #fb923c 0%, #ef4444 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        @keyframes float { 0% { transform: translateY(0px); } 50% { transform: translateY(-10px); } 100% { transform: translateY(0px); } }
+        .animate-float { animation: float 6s ease-in-out infinite; }
+        @keyframes pulse-ring { 0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(56, 189, 248, 0.7); } 70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(56, 189, 248, 0); } 100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(56, 189, 248, 0); } }
+        .pulse-ring { animation: pulse-ring 2s infinite; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f5f9; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+    </style>
+</head>
+<body class="antialiased selection:bg-accent-blue selection:text-white">
+
+    <div class="noise-overlay"></div>
+
+    <!-- NAVIGATION: SEO optimized Semantic Tag -->
+    <nav class="fixed z-50 transition-all duration-300 w-[90%] md:w-[95%] max-w-7xl top-4 md:top-6 left-1/2 -translate-x-1/2" aria-label="Hlavní navigace">
+        <div class="glass shadow-glass transition-all duration-300 hover:bg-white/90 flex justify-between items-center rounded-full px-6 py-3 md:px-10 md:py-4">
+            <a href="#" class="flex items-center gap-3 group" aria-label="Marek Anděl - Domů">
+                <!-- LOGO: "The Glass Core" - 2026 Trend -->
+                <div class="w-10 h-10 md:w-12 md:h-12 bg-navy-900 rounded-full flex items-center justify-center relative overflow-hidden group-hover:scale-110 transition-transform shadow-lg border border-navy-800">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full p-2">
+                        <defs>
+                            <radialGradient id="coreGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(12 14) rotate(90) scale(4)">
+                                <stop stop-color="#38bdf8"/>
+                                <stop offset="1" stop-color="#0284c7" stop-opacity="0.8"/>
+                            </radialGradient>
+                        </defs>
+                        <!-- Inner Glowing Core -->
+                        <circle cx="12" cy="14" r="3.5" fill="url(#coreGlow)" class="animate-pulse" style="animation-duration: 3s;"/>
+                        <!-- Isometric Glass Box -->
+                        <path d="M3 8L12 3L21 8" stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+                        <path d="M12 21L3 16V8L12 13V21Z" fill="white" fill-opacity="0.05" stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M12 21L21 16V8L12 13V21Z" fill="white" fill-opacity="0.1" stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="leading-tight hidden sm:block">
+                    <span class="block font-bold text-navy-800 text-sm md:text-base tracking-wide">MAREK ANDĚL</span>
+                    <span class="block text-[10px] md:text-xs text-gray-500 font-medium uppercase tracking-widest">Audit & Inspekce</span>
+                </div>
             </a>
-            <a href="index.html" class="text-sm font-medium text-gray-500 hover:text-navy-900 transition-colors flex items-center gap-2">
-                <i class="fa-solid fa-arrow-left"></i> Zpět na web
-            </a>
+
+            <div class="hidden md:flex items-center gap-8 text-sm md:text-base font-medium text-gray-600">
+                <a href="#about" class="hover:text-navy-800 transition-colors">Kdo jsem</a>
+                <a href="#services" class="hover:text-navy-800 transition-colors">Služby</a>
+                <a href="#process" class="hover:text-navy-800 transition-colors">Proces</a>
+                <a href="#reviews" class="hover:text-navy-800 transition-colors">Videa</a>
+            </div>
+
+            <div class="flex items-center gap-3">
+                <a href="#contact" class="bg-navy-800 text-white px-6 py-2.5 md:px-8 md:py-3 rounded-full text-sm md:text-base font-semibold hover:bg-accent-blue transition-all shadow-lg hover:shadow-neon flex items-center gap-2">
+                    <span>Poptat</span>
+                    <i class="fa-solid fa-arrow-right text-xs"></i>
+                </a>
+                <button class="md:hidden w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 text-navy-800" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" aria-label="Otevřít menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Dropdown -->
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full mt-3 glass rounded-2xl p-4 flex-col gap-2 shadow-xl md:hidden">
+            <a href="#about" class="block p-3 hover:bg-white rounded-xl text-center font-medium" onclick="this.parentElement.classList.add('hidden')">Kdo jsem</a>
+            <a href="#services" class="block p-3 hover:bg-white rounded-xl text-center font-medium" onclick="this.parentElement.classList.add('hidden')">Služby</a>
+            <a href="#process" class="block p-3 hover:bg-white rounded-xl text-center font-medium" onclick="this.parentElement.classList.add('hidden')">Proces</a>
+            <a href="#reviews" class="block p-3 hover:bg-white rounded-xl text-center font-medium" onclick="this.parentElement.classList.add('hidden')">Videa</a>
         </div>
     </nav>
 
-    <!-- Content -->
-    <main class="container mx-auto px-6 py-12 md:py-20 max-w-3xl">
-        <div class="bg-white rounded-3xl shadow-sm border border-gray-100 p-8 md:p-12">
-            
-            <h1 class="text-3xl md:text-4xl font-serif text-navy-900 mb-8 border-b-4 border-accent-blue inline-block pb-2">Ochrana osobních údajů</h1>
+    <!-- HERO SECTION -->
+    <header class="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <video autoplay muted loop playsinline class="w-full h-full object-cover scale-105">
+                <source src="videos/hero-video.mp4" type="video/mp4">
+            </video>
+            <div class="absolute inset-0 bg-navy-900/80 bg-gradient-to-b from-navy-900/90 via-navy-900/70 to-navy-900/90 backdrop-blur-[2px]"></div>
+        </div>
 
-            <p class="text-gray-600 mb-8 leading-relaxed">
-                Vaše soukromí je pro nás klíčové. Tento dokument vysvětluje, jak společnost R&M Trade Ltd. nakládá s vašimi údaji v souladu s nařízením GDPR.
-            </p>
-
-            <div class="space-y-8">
-                
-                <div class="bg-gray-50 p-6 rounded-xl border border-gray-100">
-                    <h2 class="font-bold text-navy-900 mb-4 text-lg">1. Správce údajů</h2>
-                    <p class="text-sm text-gray-600 mb-2">Správcem vašich osobních údajů je společnost:</p>
-                    <ul class="text-sm text-gray-800 font-medium space-y-1">
-                        <li>R&M Trade Ltd.</li>
-                        <li>Registrační číslo: SC836993</li>
-                        <li>Sídlo: 119/11 Gorgie Road, Edinburgh, Scotland, EH11 1TE</li>
-                    </ul>
-                    <p class="text-sm text-gray-500 mt-4 pt-4 border-t border-gray-200">
-                        Kontakt: <a href="mailto:marek@marekandel.com" class="text-accent-blue font-bold">marek@marekandel.com</a>
-                    </p>
-                </div>
-
-                <section>
-                    <h2 class="text-xl font-bold text-navy-900 mb-3">2. Jaká data sbíráme a proč?</h2>
-                    <p class="text-gray-600 mb-3">Zpracováváme pouze údaje, které nám sami poskytnete přes kontaktní formulář nebo e-mail:</p>
-                    <ul class="list-disc pl-5 space-y-2 text-gray-600">
-                        <li><strong>Identifikační údaje:</strong> Jméno a příjmení (pro komunikaci).</li>
-                        <li><strong>Kontaktní údaje:</strong> E-mailová adresa a telefonní číslo (abychom vám mohli odpovědět).</li>
-                        <li><strong>Údaje o poptávce:</strong> Informace o zboží a dodavatelích (nezbytné pro splnění služby).</li>
-                    </ul>
-                </section>
-
-                <section>
-                    <h2 class="text-xl font-bold text-navy-900 mb-3">3. Jak dlouho data uchováváme?</h2>
-                    <p class="text-gray-600">
-                        Vaše údaje uchováváme po dobu nezbytnou k vyřízení vaší poptávky nebo po dobu trvání naší obchodní spolupráce. Po jejím ukončení uchováváme pouze doklady vyžadované zákonem (např. faktury po dobu 10 let).
-                    </p>
-                </section>
-
-                <section>
-                    <h2 class="text-xl font-bold text-navy-900 mb-3">4. Komu data předáváme?</h2>
-                    <p class="text-gray-600 mb-3">
-                        Vaše osobní údaje <strong>nikdy neprodáváme</strong>. Přístup k nim mohou mít pouze prověření zpracovatelé, které využíváme pro chod podnikání:
-                    </p>
-                    <ul class="list-disc pl-5 space-y-2 text-gray-600">
-                        <li>Poskytovatel webhostingu a e-mailových služeb.</li>
-                        <li>Účetní firma (pouze fakturační údaje).</li>
-                    </ul>
-                </section>
-
-                <section>
-                    <h2 class="text-xl font-bold text-navy-900 mb-3">5. Vaše práva</h2>
-                    <p class="text-gray-600">
-                        Máte právo kdykoliv požádat o výpis údajů, které o vás evidujeme, požádat o jejich opravu nebo výmaz (pokud tomu nebrání zákonná povinnost archivace).
-                    </p>
-                </section>
-
+        <div class="container mx-auto px-6 relative z-10 text-center">
+            <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-1.5 mb-8 animate-float">
+                <span class="w-2 h-2 bg-green-400 rounded-full pulse-ring"></span>
+                <span class="text-white/90 text-xs font-bold uppercase tracking-widest">Nyní v Hangzhou, Zhejiang</span>
             </div>
 
-        </div>
-    </main>
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-serif text-white mb-6 leading-tight tracking-tight">
+                Import bez <br/>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent-blue to-accent-orange italic pr-4">nočních můr.</span>
+            </h1>
+            
+            <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-10 font-light leading-relaxed">
+                Jednáte se skutečným čínským výrobcem, nebo jen s překupníkem? <br class="hidden md:block">
+                Než pošlete zálohu, pošlete tam mě. Váš český partner pro <strong>kontrolu a audit</strong> na čínské adrese.
+            </p>
 
-    <footer class="bg-navy-900 text-white py-8 border-t border-navy-800 text-center text-sm text-gray-500">
-        &copy; 2026 Marek Anděl - R&M Trade Ltd.
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="#contact" class="w-full sm:w-auto px-8 py-4 bg-accent-blue text-navy-900 font-bold rounded-full hover:bg-white transition-all shadow-[0_0_30px_rgba(56,189,248,0.4)] hover:shadow-[0_0_50px_rgba(255,255,255,0.6)] text-lg">
+                    Ověřit dodavatele
+                </a>
+                <a href="#services" class="w-full sm:w-auto px-8 py-4 border border-white/30 text-white font-medium rounded-full hover:bg-white/10 backdrop-blur-sm transition-all flex items-center justify-center gap-2">
+                    Jak to funguje
+                </a>
+            </div>
+
+            <!-- Trust Signals -->
+            <div class="mt-16 flex flex-wrap justify-center gap-8 md:gap-16 opacity-70">
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-white font-serif">100%</div>
+                    <div class="text-xs text-gray-400 uppercase tracking-widest mt-1">Transparentnost</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-white font-serif">CZ/EN/CN</div>
+                    <div class="text-xs text-gray-400 uppercase tracking-widest mt-1">Jazyková vybavenost</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-white font-serif">0%</div>
+                    <div class="text-xs text-gray-400 uppercase tracking-widest mt-1">Riziko podvodu</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- INTRO SECTION -->
+    <section id="about" class="py-24 md:py-32 relative">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <!-- Visual Side -->
+                <div class="w-full lg:w-1/2 relative group max-w-md mx-auto lg:max-w-none lg:mx-0">
+                    <div class="absolute -inset-4 bg-gradient-to-tr from-accent-blue to-accent-orange rounded-[40px] opacity-20 blur-2xl group-hover:opacity-30 transition-opacity duration-500"></div>
+                    <div class="relative rounded-[32px] overflow-hidden shadow-2xl border border-gray-100 max-w-md mx-auto">
+                        <img src="images/marek-profile.jpg" alt="Marek Anděl - Inspektor v Číně" class="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105">
+                        
+                        <a href="https://www.youtube.com/@marekvcine" target="_blank" class="absolute bottom-6 right-6 glass p-4 rounded-2xl flex items-center gap-4 shadow-lg animate-float hover:bg-white transition-colors cursor-pointer">
+                            <div class="w-12 h-12 bg-accent-red rounded-full flex items-center justify-center text-white text-xl">
+                                <i class="fa-brands fa-youtube"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs text-gray-500 font-bold uppercase">Sledujte mě</div>
+                                <div class="text-sm font-bold text-navy-800">Marek v Číně</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Content Side -->
+                <div class="w-full lg:w-1/2">
+                    <h2 class="text-sm font-bold text-accent-blue uppercase tracking-widest mb-4">O mně</h2>
+                    <h3 class="text-4xl md:text-5xl font-serif text-navy-900 mb-8 leading-tight">
+                        Český přístup.<br>Britské vzdělání.<br><span class="text-gradient-orange">Čínská adresa.</span>
+                    </h3>
+                    <div class="space-y-6 text-gray-600 text-lg leading-relaxed">
+                        <p>
+                            Ahoj, jsem <strong>Marek Anděl</strong>. Pocházím z Českých Budějovic, ale zásadní část profesního života jsem strávil ve Velké Británii. Získal jsem zde nejen titul MSc na University of Stirling, ale i britské občanství.
+                        </p>
+                        <p>
+                            Dnes žiji se svou rodinou přímo v Číně, nedaleko Hangzhou. Díky svému vzdělání a praxi vám garantuji západní standardy kvality, které v Číně tvrdě vymáhám. Společně s mou ženou (rodilou Číňankou) tvoříme tým, který pro vás zajistí obchod bez jakýchkoliv bariér.
+                        </p>
+                        <div class="bg-white p-6 rounded-2xl border-l-4 border-accent-blue shadow-sm">
+                            <p class="italic text-navy-800 font-medium">
+                                "Nejsem jen teoretik. Znám procesy z první ruky. Ne jako agent, ale jako majitel zboží, který riskuje vlastní kapitál při dovozu pro Panda Box. Nyní tuto jistotu nabízím i vám."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="services" class="py-24 bg-surface-off border-t border-gray-200">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-20">
+                <h2 class="text-4xl font-serif text-navy-900 mb-6">Jak chráním vaše peníze?</h2>
+                <p class="text-gray-600 text-lg">Vyberte si úroveň ochrany. Většina klientů začíná rychlou prověrkou, než pošlou první dolar.</p>
+            </div>
+
+            <!-- Bento Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[minmax(350px,auto)]">
+                
+                <!-- Card 1: Vzdálená Prověrka -->
+                <div class="bento-card md:col-span-2 md:row-span-1 bg-gradient-to-br from-white to-blue-50 border-accent-blue/30 relative group">
+                    <div class="absolute top-4 right-4 bg-accent-orange text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest shadow-lg z-10">Doporučeno</div>
+                    
+                    <div class="flex flex-col md:flex-row h-full gap-8">
+                        <div class="flex-1 flex flex-col justify-center">
+                            <div class="w-16 h-16 bg-blue-100 text-accent-blue rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:bg-accent-blue group-hover:text-white transition-colors">
+                                <i class="fa-solid fa-shield-halved"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-navy-900 mb-3">Vzdálená prověrka</h3>
+                            <p class="text-gray-600 mb-6 leading-relaxed">
+                                Odhalte 80 % podvodníků do 48 hodin. Zkontroluji čínské rejstříky, licence, blacklisty a bankovní účty. Pokud je to podvod, zjistím to dřív, než zaplatíte.
+                            </p>
+                            <ul class="space-y-3 mb-8">
+                                <li class="flex items-center gap-3 text-sm font-medium text-navy-800"><i class="fa-solid fa-check text-green-500"></i> Kontrola obchodní licence</li>
+                                <li class="flex items-center gap-3 text-sm font-medium text-navy-800"><i class="fa-solid fa-check text-green-500"></i> Ověření bankovního účtu (Anti-fraud)</li>
+                            </ul>
+                            <a href="#contact" class="inline-flex items-center text-accent-blue font-bold hover:gap-2 transition-all">Chci prověřit firmu <i class="fa-solid fa-arrow-right ml-2 text-sm"></i></a>
+                        </div>
+                        
+                        <!-- Report Graphic -->
+                        <div class="w-full md:w-1/3 relative flex items-center justify-center p-2">
+                             <div class="relative w-full aspect-[4/5] bg-white rounded-xl shadow-[0_10px_40px_-10px_rgba(0,0,0,0.1)] border border-gray-100 p-5 transform rotate-3 group-hover:rotate-0 transition-all duration-500 overflow-hidden flex flex-col">
+                                <div class="flex items-center gap-3 mb-6 border-b border-gray-50 pb-4">
+                                    <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-accent-blue">
+                                        <i class="fa-solid fa-building"></i>
+                                    </div>
+                                    <div class="flex-1 space-y-2">
+                                        <div class="h-2 w-2/3 bg-gray-200 rounded-full"></div>
+                                        <div class="h-1.5 w-1/3 bg-gray-100 rounded-full"></div>
+                                    </div>
+                                </div>
+                                <div class="space-y-4 flex-1">
+                                     <div class="flex items-center gap-3">
+                                        <div class="w-5 h-5 rounded-full bg-green-100 text-green-500 flex items-center justify-center text-[10px]"><i class="fa-solid fa-check"></i></div>
+                                        <div class="space-y-1.5 flex-1">
+                                            <div class="h-1.5 w-full bg-gray-100 rounded-full"></div>
+                                            <div class="h-1.5 w-4/5 bg-gray-50 rounded-full"></div>
+                                        </div>
+                                     </div>
+                                     <div class="flex items-center gap-3">
+                                        <div class="w-5 h-5 rounded-full bg-green-100 text-green-500 flex items-center justify-center text-[10px]"><i class="fa-solid fa-check"></i></div>
+                                        <div class="space-y-1.5 flex-1">
+                                            <div class="h-1.5 w-5/6 bg-gray-100 rounded-full"></div>
+                                        </div>
+                                     </div>
+                                     <div class="flex items-center gap-3">
+                                        <div class="w-5 h-5 rounded-full bg-green-100 text-green-500 flex items-center justify-center text-[10px]"><i class="fa-solid fa-check"></i></div>
+                                        <div class="space-y-1.5 flex-1">
+                                            <div class="h-1.5 w-full bg-gray-100 rounded-full"></div>
+                                        </div>
+                                     </div>
+                                </div>
+                                <div class="absolute bottom-4 right-4 bg-white/90 backdrop-blur-sm border-2 border-green-500 px-4 py-2 rounded-lg text-center transform rotate-[-5deg] shadow-lg">
+                                    <div class="text-[10px] text-green-600 font-bold uppercase tracking-widest">RATING</div>
+                                    <div class="text-3xl font-black text-green-600 leading-none tracking-tighter">A+</div>
+                                </div>
+                                 <div class="absolute -top-10 -right-10 w-32 h-32 bg-accent-blue/5 rounded-full blur-2xl pointer-events-none"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Osobní Inspekce -->
+                <div class="bento-card bg-navy-900 text-white relative overflow-hidden group border-0 shadow-2xl flex flex-col justify-between">
+                    <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cartographer.png')] opacity-10"></div>
+                    <div class="absolute top-6 right-6 flex items-center gap-2">
+                        <span class="relative flex h-3 w-3">
+                          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                          <span class="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
+                        </span>
+                        <span class="text-xs font-bold tracking-widest text-red-400 uppercase">Live Stream</span>
+                    </div>
+                    <div>
+                        <div class="w-14 h-14 bg-white/10 backdrop-blur-md rounded-2xl flex items-center justify-center text-2xl mb-6 border border-white/5 relative z-10 group-hover:scale-110 transition-transform duration-300">
+                             <i class="fa-solid fa-video text-accent-blue"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 relative z-10">Osobní Inspekce</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-6 relative z-10 group-hover:text-gray-200 transition-colors">
+                            Nestačí vám fotky? Zapnu kameru a projdu s vámi továrnu v reálném čase. Ověříme kvalitu materiálu a výrobní linku společně.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-8 relative z-10">
+                            <span class="px-3 py-1 bg-white/5 rounded-full text-[10px] font-bold tracking-wide text-gray-300 border border-white/10 uppercase">Hangzhou</span>
+                            <span class="px-3 py-1 bg-white/5 rounded-full text-[10px] font-bold tracking-wide text-gray-300 border border-white/10 uppercase">Yiwu</span>
+                            <span class="px-3 py-1 bg-white/5 rounded-full text-[10px] font-bold tracking-wide text-gray-300 border border-white/10 uppercase">Ningbo</span>
+                        </div>
+                    </div>
+                    <a href="#contact" class="inline-flex items-center gap-2 text-accent-blue font-bold group-hover:text-white transition-colors relative z-10">
+                        <span>Poptat výjezd</span>
+                        <i class="fa-solid fa-arrow-right transform group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                    <div class="absolute inset-0 bg-gradient-to-t from-accent-blue/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                </div>
+
+                <!-- Card 3: Sourcing -->
+                <div class="bento-card">
+                    <div class="w-14 h-14 bg-orange-100 text-accent-orange rounded-2xl flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-magnifying-glass-dollar"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy-900 mb-3">Vyhledání výrobců</h3>
+                    <p class="text-gray-500 mb-6 text-sm leading-relaxed">
+                        Najdu dodavatele, vyjednáme cenu (s mou čínskou manželkou), zajistím vzorky a dohlédnu na logistiku až k vám do skladu.
+                    </p>
+                    <a href="#contact" class="text-sm font-bold text-navy-800 underline decoration-accent-orange underline-offset-4">Najít zboží</a>
+                </div>
+
+                <!-- Card 4: Veletrhy -->
+                <div class="bento-card md:col-span-2 relative overflow-hidden group border-0 bg-navy-900 text-white">
+                    <div class="absolute right-0 top-0 h-full w-1/3 bg-gradient-to-l from-white/5 to-transparent pointer-events-none"></div>
+                    <div class="absolute -right-6 -bottom-6 text-white/5 text-9xl transform rotate-12 group-hover:rotate-0 transition-transform duration-700 pointer-events-none">
+                        <i class="fa-solid fa-id-card-clip"></i>
+                    </div>
+                    <div class="relative z-10 flex flex-col justify-center h-full max-w-lg">
+                        <div class="flex items-center gap-3 mb-4">
+                             <div class="w-10 h-10 bg-indigo-500 rounded-lg flex items-center justify-center text-white shadow-lg shadow-indigo-500/30">
+                                <i class="fa-solid fa-plane-slash text-sm"></i>
+                            </div>
+                            <span class="text-indigo-200 text-xs font-bold uppercase tracking-wide">
+                                Ušetříte 50.000+ Kč
+                            </span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-2">Veletrhy bez letenky</h3>
+                        <p class="text-gray-400 mb-6 text-sm leading-relaxed max-w-md">
+                            Canton Fair? Yiwu Market? Nemusíte platit hotel ani letenku. Půjdu tam za vás, posbírám katalogy, vizitky a spojím se s vámi přes video.
+                        </p>
+                        <a href="#contact" class="inline-flex items-center gap-2 text-sm font-bold text-white hover:text-indigo-300 transition-colors">
+                            <span>Mám zájem o zastoupení</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS SECTION -->
+    <section id="process" class="py-24 bg-navy-900 text-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-accent-blue opacity-5 blur-[100px] rounded-full translate-x-1/3 -translate-y-1/3"></div>
+        <div class="absolute bottom-0 left-0 w-64 h-64 bg-accent-orange opacity-5 blur-[80px] rounded-full -translate-x-1/3 translate-y-1/3"></div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="flex flex-col lg:flex-row justify-between items-center gap-16">
+                <div class="lg:w-1/3 text-center lg:text-left">
+                    <h2 class="text-3xl md:text-4xl font-serif mb-4 leading-tight">
+                        Žádné složité <br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400">smlouvy.</span>
+                    </h2>
+                    <p class="text-gray-400 text-lg leading-relaxed">
+                        Rychlá akce, jasný výsledek. Proces jsem osekal na kost. Žádné právnické kličky, jen domluva chlapa s chlapem a jasný report.
+                    </p>
+                </div>
+                
+                <div class="lg:w-2/3 w-full">
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 relative">
+                        <div class="hidden md:block absolute top-8 left-10 right-10 h-0.5 bg-gray-800 z-0"></div>
+
+                        <!-- Step 1 -->
+                        <div class="relative z-10 group text-center">
+                            <div class="w-16 h-16 mx-auto bg-navy-800 border border-gray-700 rounded-2xl flex items-center justify-center text-xl font-bold text-gray-400 group-hover:border-accent-blue group-hover:text-white transition-all duration-300 shadow-lg group-hover:shadow-accent-blue/20 mb-4">
+                                1
+                            </div>
+                            <h3 class="text-white font-bold mb-1">Poptávka</h3>
+                            <p class="text-xs text-gray-500">WhatsApp / Email</p>
+                        </div>
+
+                        <!-- Step 2 -->
+                        <div class="relative z-10 group text-center">
+                            <div class="w-16 h-16 mx-auto bg-navy-800 border border-gray-700 rounded-2xl flex items-center justify-center text-xl font-bold text-gray-400 group-hover:border-accent-blue group-hover:text-white transition-all duration-300 shadow-lg group-hover:shadow-accent-blue/20 mb-4">
+                                2
+                            </div>
+                            <h3 class="text-white font-bold mb-1">Kalkulace</h3>
+                            <p class="text-xs text-gray-500">Cena a plán</p>
+                        </div>
+
+                        <!-- Step 3 (Featured - Prověrka) -->
+                        <div class="relative z-10 group text-center">
+                            <div class="absolute inset-0 bg-accent-blue/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                            <div class="w-16 h-16 mx-auto bg-accent-blue text-navy-900 rounded-2xl flex items-center justify-center text-xl font-bold transition-transform duration-300 group-hover:scale-110 shadow-[0_0_20px_rgba(56,189,248,0.4)] mb-4 relative">
+                                <i class="fa-solid fa-magnifying-glass-chart"></i>
+                            </div>
+                            <h3 class="text-accent-blue font-bold mb-1">Prověrka</h3>
+                            <p class="text-xs text-gray-400">Lustrace & Data</p>
+                        </div>
+
+                        <!-- Step 4 -->
+                        <div class="relative z-10 group text-center">
+                            <div class="w-16 h-16 mx-auto bg-navy-800 border border-gray-700 rounded-2xl flex items-center justify-center text-xl font-bold text-gray-400 group-hover:border-green-500 group-hover:text-white transition-all duration-300 shadow-lg group-hover:shadow-green-500/20 mb-4">
+                                4
+                            </div>
+                            <h3 class="text-white font-bold mb-1">Report</h3>
+                            <p class="text-xs text-gray-500">Verdikt a fakta</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTENT / VIDEO SECTION -->
+    <section id="reviews" class="py-24">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col items-center text-center mb-12 gap-6">
+                <div>
+                    <h2 class="text-4xl font-serif text-navy-900 mb-2">Důkaz místo slibů</h2>
+                    <p class="text-gray-600">Podívejte se na Čínu mýma očima na YouTube.</p>
+                </div>
+                <a href="https://www.youtube.com/@marekvcine" target="_blank" class="flex items-center gap-3 px-6 py-3 rounded-full border border-gray-200 hover:border-red-500 hover:text-red-500 transition-colors font-medium">
+                    <i class="fa-brands fa-youtube text-red-500"></i>
+                    Sledovat kanál
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Video 1 -->
+                <div class="rounded-3xl overflow-hidden shadow-2xl relative group aspect-video">
+                    <iframe src="https://www.youtube.com/embed/3OoJbMZ5uCM" title="Marek v Číně - Inspekce" class="w-full h-full" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <!-- Video 2 -->
+                <div class="rounded-3xl overflow-hidden shadow-2xl relative group aspect-video">
+                    <iframe src="https://www.youtube.com/embed/b0ngBmpISxM" title="Marek v Číně - Veletrh" class="w-full h-full" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-24 bg-gradient-to-b from-surface-off to-white">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <div class="bg-white rounded-[40px] shadow-2xl overflow-hidden border border-gray-100 flex flex-col md:flex-row">
+                
+                <!-- Contact Info -->
+                <div class="w-full md:w-1/3 bg-navy-900 text-white p-12 flex flex-col justify-between relative overflow-hidden">
+                    <div class="absolute inset-0 bg-navy-800 opacity-50 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+                    <div class="relative z-10">
+                        <h3 class="text-2xl font-serif mb-6">Kontakt</h3>
+                        <p class="text-gray-400 mb-8 text-sm leading-relaxed">
+                            V Číně se byznys nedělá přes e-maily, ale "teď hned" na WeChatu. Já funguji stejně. <br><br>
+                            Máte dotaz? Napište mi na WhatsApp. <strong>Pokud v Číně zrovna nespím, odpovím obratem.</strong>
+                        </p>
+                        <div class="space-y-6">
+                            <!-- Email -->
+                            <a href="mailto:marek@marekandel.com" class="flex items-center gap-4 text-sm font-medium text-gray-300 hover:text-white transition-colors group">
+                                <div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-white/10 transition-colors">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                marek@marekandel.com
+                            </a>
+
+                            <!-- Phone -->
+                            <a href="tel:+447519918629" class="flex items-center gap-4 text-sm font-medium text-gray-300 hover:text-white transition-colors group">
+                                <div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-white/10 transition-colors">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                +44 7519 918 629
+                            </a>
+
+                            <!-- WeChat -->
+                            <div class="group flex items-center gap-4 text-sm font-medium hover:text-[#07C160] transition-colors p-3 -ml-3 rounded-2xl border border-transparent hover:bg-white/5 hover:border-[#07C160]/30 cursor-pointer" onclick="navigator.clipboard.writeText('wxid_marekandel'); alert('WeChat ID zkopírováno do schránky!');">
+                                <div class="relative w-12 h-12 rounded-full bg-white/5 flex items-center justify-center text-gray-400 group-hover:text-[#07C160] group-hover:bg-[#07C160]/10 transition-all">
+                                    <i class="fa-brands fa-weixin text-xl"></i>
+                                    <div class="absolute -bottom-1 -right-1 w-5 h-5 bg-[#07C160] rounded-full flex items-center justify-center text-navy-900 text-[10px] opacity-0 group-hover:opacity-100 transition-opacity">
+                                        <i class="fa-solid fa-plus"></i>
+                                    </div>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="text-xs text-gray-500 uppercase tracking-wide group-hover:text-[#07C160]">WeChat ID</div>
+                                    <div class="font-mono text-gray-200 group-hover:text-white">wxid_marekandel</div>
+                                </div>
+                                <i class="fa-regular fa-copy text-gray-600 group-hover:text-[#07C160] transition-colors"></i>
+                            </div>
+
+                            <!-- WhatsApp -->
+                            <a href="https://wa.me/447519918629" class="group flex items-center gap-4 text-sm font-medium hover:text-green-400 transition-colors p-3 -ml-3 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-green-500/30">
+                                <div class="relative w-12 h-12 rounded-full bg-[#25D366] flex items-center justify-center text-white shadow-lg group-hover:scale-110 transition-transform">
+                                    <i class="fa-brands fa-whatsapp text-xl"></i>
+                                    <div class="absolute -top-1 -right-1 w-3.5 h-3.5 bg-navy-900 rounded-full flex items-center justify-center">
+                                        <div class="w-2.5 h-2.5 bg-green-400 rounded-full animate-pulse"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="font-bold text-white text-base">WhatsApp</div>
+                                    <div class="text-xs text-green-400 font-bold uppercase tracking-wide flex items-center gap-1.5">
+                                        <span class="w-1.5 h-1.5 rounded-full bg-green-400"></span>
+                                        Nejrychlejší spojení
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="relative z-10 mt-12">
+                        <div class="text-xs text-gray-500 uppercase tracking-widest mb-2">Lokace</div>
+                        <div class="font-serif text-lg">Hangzhou, Zhejiang</div>
+                        <div class="text-sm text-gray-400">Čína</div>
+                    </div>
+                </div>
+
+                <!-- Form -->
+                <div class="w-full md:w-2/3 p-12">
+                    <h2 class="text-3xl font-serif text-navy-900 mb-8">Nezávazná poptávka</h2>
+                    <form action="https://formspree.io/f/xblnapzy" method="POST" enctype="multipart/form-data" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label class="text-xs font-bold uppercase tracking-wide text-gray-500 ml-1">Jméno</label>
+                                <input type="text" name="name" required class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:border-accent-blue focus:ring-2 focus:ring-accent-blue/20 transition-all" placeholder="Jan Novák">
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-xs font-bold uppercase tracking-wide text-gray-500 ml-1">E-mail</label>
+                                <input type="email" name="email" required class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:border-accent-blue focus:ring-2 focus:ring-accent-blue/20 transition-all" placeholder="vas@email.cz">
+                            </div>
+                        </div>
+
+                        <div class="space-y-2">
+                            <label class="text-xs font-bold uppercase tracking-wide text-gray-500 ml-1">Typ služby</label>
+                            <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                                <label class="cursor-pointer">
+                                    <input type="radio" name="service" value="Prověrka" class="peer hidden" checked>
+                                    <div class="text-center py-3 border border-gray-200 rounded-xl text-sm font-medium text-gray-600 peer-checked:bg-navy-900 peer-checked:text-white peer-checked:border-navy-900 transition-all">Prověrka</div>
+                                </label>
+                                <label class="cursor-pointer">
+                                    <input type="radio" name="service" value="Inspekce" class="peer hidden">
+                                    <div class="text-center py-3 border border-gray-200 rounded-xl text-sm font-medium text-gray-600 peer-checked:bg-navy-900 peer-checked:text-white peer-checked:border-navy-900 transition-all">Inspekce</div>
+                                </label>
+                                <label class="cursor-pointer">
+                                    <input type="radio" name="service" value="Vyhledání" class="peer hidden">
+                                    <div class="text-center py-3 border border-gray-200 rounded-xl text-sm font-medium text-gray-600 peer-checked:bg-navy-900 peer-checked:text-white peer-checked:border-navy-900 transition-all">Vyhledání</div>
+                                </label>
+                                <label class="cursor-pointer">
+                                    <input type="radio" name="service" value="Jiné" class="peer hidden">
+                                    <div class="text-center py-3 border border-gray-200 rounded-xl text-sm font-medium text-gray-600 peer-checked:bg-navy-900 peer-checked:text-white peer-checked:border-navy-900 transition-all">Jiné</div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="space-y-2">
+                            <label class="text-xs font-bold uppercase tracking-wide text-gray-500 ml-1">Zpráva</label>
+                            <textarea name="message" rows="4" class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:border-accent-blue focus:ring-2 focus:ring-accent-blue/20 transition-all" placeholder="Popište situaci. Máte už kontakt na továrnu? Co chcete dovážet?"></textarea>
+                        </div>
+
+                        <div class="space-y-2">
+                             <label class="block w-full border-2 border-dashed border-gray-300 rounded-xl p-8 text-center cursor-pointer hover:bg-gray-50 hover:border-accent-blue transition-colors group">
+                                <input type="file" class="hidden" multiple>
+                                <i class="fa-solid fa-cloud-arrow-up text-2xl text-gray-400 group-hover:text-accent-blue mb-2 transition-colors"></i>
+                                <div class="text-sm font-medium text-gray-600">Nahrát přílohy</div>
+                                <div class="text-xs text-gray-400 mt-1">PDF, JPG, PNG (Max 10MB)</div>
+                             </label>
+                        </div>
+
+                        <button type="submit" class="w-full bg-gradient-to-r from-accent-blue to-blue-600 text-white font-bold py-4 rounded-xl shadow-lg hover:shadow-neon hover:scale-[1.01] transition-all transform">
+                            Odeslat nezávaznou poptávku
+                        </button>
+                        
+                        <div class="flex items-center gap-2 justify-center text-xs text-gray-400">
+                            <i class="fa-solid fa-lock"></i> Vaše data jsou v bezpečí (GDPR Compliant)
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="main-footer" class="bg-navy-900 text-white py-12 border-t border-navy-800">
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex justify-center items-center gap-6 mb-8">
+                <a href="#" class="w-10 h-10 rounded-full bg-white/5 hover:bg-white/20 flex items-center justify-center transition-colors" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="w-10 h-10 rounded-full bg-white/5 hover:bg-white/20 flex items-center justify-center transition-colors" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#" class="w-10 h-10 rounded-full bg-white/5 hover:bg-white/20 flex items-center justify-center transition-colors" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+            <p class="text-gray-500 text-sm mb-4">&copy; 2026 Marek Anděl - R&M Trade Ltd. Všechna práva vyhrazena.</p>
+            <div class="flex flex-col md:flex-row justify-center gap-4 md:gap-8 text-xs text-gray-500">
+                <a href="gdpr.html" class="hover:text-white transition-colors">Ochrana osobních údajů (GDPR)</a>
+                <a href="podminky.html" class="hover:text-white transition-colors">Obchodní podmínky</a>
+            </div>
+        </div>
     </footer>
 
+    <!-- STICKY WHATSAPP -->
+    <div id="sticky-whatsapp" class="fixed bottom-6 right-6 flex flex-col gap-3 z-40 transition-all duration-500 transform">
+        <a href="https://wa.me/447519918629" class="relative w-16 h-16 bg-accent-blue rounded-full text-white flex items-center justify-center text-3xl shadow-[0_4px_20px_rgba(56,189,248,0.5)] hover:scale-110 hover:shadow-[0_4px_25px_rgba(56,189,248,0.7)] transition-all duration-300" aria-label="Kontaktovat přes WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span class="absolute top-0 right-0 w-5 h-5 bg-red-500 border-2 border-white rounded-full flex items-center justify-center text-[10px] font-bold animate-pulse">1</span>
+        </a>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = { threshold: 0.1 };
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('opacity-100', 'translate-y-0');
+                        entry.target.classList.remove('opacity-0', 'translate-y-10');
+                    }
+                });
+            }, observerOptions);
+
+            const elements = document.querySelectorAll('.bento-card, h2, h3, p');
+            elements.forEach(el => {
+                el.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+                observer.observe(el);
+            });
+
+            // Hide sticky button when footer is visible
+            const footerObserver = new IntersectionObserver((entries) => {
+                const stickyBtn = document.getElementById('sticky-whatsapp');
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        stickyBtn.classList.add('translate-y-32', 'opacity-0');
+                    } else {
+                        stickyBtn.classList.remove('translate-y-32', 'opacity-0');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            const footer = document.getElementById('main-footer');
+            if (footer) footerObserver.observe(footer);
+        });
+    </script>
 </body>
 </html>
